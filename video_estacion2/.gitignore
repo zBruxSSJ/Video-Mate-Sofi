@@ -1,0 +1,6 @@
+frames/*.png
+frames/_test*.py
+frames/preview.py
+output/*.mp4
+output/concat_list.txt
+__pycache__/
