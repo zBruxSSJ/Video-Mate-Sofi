@@ -95,13 +95,21 @@ SCENES = [
         ],
     },
     {
-        "num": 8, "titulo": "Error detectado y cierre", "inicio": "3:20", "fin": "3:50",
+        "num": 8, "titulo": "Errores frecuentes y cierre", "inicio": "3:20", "fin": "3:54",
+        "nota": (
+            "Esta escena usa el ejemplo de error frecuente tal como figura en la hoja "
+            "(lím x→−3 de 2/(x+3) = 2/0 = ∞), que es distinto de nuestro caso asignado "
+            "(h(x) = 1/(x−2) en x = 2). Primero se muestra la conclusión errónea de la "
+            "hoja y por qué está mal; después se retoma la conclusión correcta de nuestro "
+            "propio caso."
+        ),
         "lineas": [
-            ("Jerónimo", "3:20", "Por último, les contamos un error muy común."),
-            ("Jerónimo", "3:24", "Muchos piensan que, si el límite 'da infinito', entonces la función es continua."),
-            ("Jerónimo", "3:30", "Pero eso es incorrecto: un límite infinito, o un límite que no existe, significa justamente que la función NO es continua."),
-            ("Jerónimo", "3:38", "La conclusión correcta es: h de x es discontinua en x igual a dos, con una discontinuidad inevitable de salto infinito, porque la recta x igual a dos es asíntota vertical."),
-            ("TODOS", "3:48", "¡Gracias por ver!"),
+            ("Jerónimo", "3:20", "Para cerrar, miremos un error muy frecuente, tal como lo plantea la hoja."),
+            ("Jerónimo", "3:24", "La propuesta dice así: el límite, cuando equis tiende a menos tres, de dos sobre, equis más tres, da dos sobre cero, es decir, infinito."),
+            ("Jerónimo", "3:31", "Y de ahí concluyen, textualmente: «como dio infinito, el límite existe, y la función es continua en equis igual a menos tres»."),
+            ("Jerónimo", "3:38", "Pero eso está mal: que dé infinito significa que el límite NO existe, porque por un lado da menos infinito, y por el otro, más infinito."),
+            ("Jerónimo", "3:46", "Volviendo a nuestro caso: h de equis es discontinua en equis igual a dos, con una discontinuidad inevitable de salto infinito, porque x igual a dos es asíntota vertical."),
+            ("TODOS", "3:53", "¡Gracias por ver!"),
         ],
     },
 ]
@@ -135,7 +143,7 @@ def build_document():
     run = sub.add_run(
         "San Ignacio de Loyola School (Paraguay) · 3° BATIN · Matemática\n"
         "Grupo 4: Sofía Cabrera · Micaela Cubilla · Fabrizio Riquelme · Jerónimo Lovera\n"
-        "Duración total del video: 3:50 min — Video_Estacion2_CasoDeEstudio.mp4"
+        "Duración total del video: 3:54 min — Video_Estacion2_CasoDeEstudio.mp4"
     )
     run.italic = True
     run.font.size = Pt(10.5)
@@ -178,6 +186,13 @@ def build_document():
         h = doc.add_heading(
             f"Escena {sc['num']} — {sc['titulo']}  ({sc['inicio']}–{sc['fin']})", level=1
         )
+
+        if "nota" in sc:
+            nota_p = doc.add_paragraph()
+            nota_run = nota_p.add_run(sc["nota"])
+            nota_run.italic = True
+            nota_run.font.size = Pt(10)
+            nota_run.font.color.rgb = RGBColor(0x66, 0x66, 0x66)
 
         for persona, tiempo, texto in sc["lineas"]:
             p = doc.add_paragraph()
