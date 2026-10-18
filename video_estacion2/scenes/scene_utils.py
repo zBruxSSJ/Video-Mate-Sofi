@@ -28,20 +28,20 @@ Y0, Y1 = 0.0, 9.0
 # ---------------------------------------------------------------------------
 # Paleta
 # ---------------------------------------------------------------------------
-BG_TOP = "#0b1522"
-BG_BOTTOM = "#172a42"
+BG_TOP = "#150c28"
+BG_BOTTOM = "#341a57"
 
-TURQUOISE = "#2dd4bf"
-ORANGE = "#fb923c"
-RED = "#f43f5e"
-GREEN = "#34d399"
-VIOLET = "#a78bfa"
-GOLD = "#fbbf24"
+TURQUOISE = "#4cc9f0"   # celeste (antes turquesa)
+ORANGE = "#ff8c42"      # coral/ámbar (antes naranja)
+RED = "#ff3b5c"         # carmesí (error)
+GREEN = "#06d6a0"       # verde esmeralda (correcto)
+VIOLET = "#c77dff"      # orquídea (antes violeta lavanda)
+GOLD = "#ffd166"        # amarillo dorado (antes dorado más opaco)
 
-TEXT_LIGHT = "#eaf2fb"
-TEXT_MUTED = "#9fb3c8"
-CARD_BG = "#1c3254"
-CARD_BG_SOFT = "#15253d"
+TEXT_LIGHT = "#f5eeff"
+TEXT_MUTED = "#b7a6d6"
+CARD_BG = "#3f2566"
+CARD_BG_SOFT = "#2a1845"
 
 PALETTE = {
     "turquoise": TURQUOISE,

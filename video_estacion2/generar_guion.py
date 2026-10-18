@@ -9,19 +9,19 @@ from docx.oxml.ns import qn
 from docx.oxml import OxmlElement
 
 COLORS = {
-    "Sofía": RGBColor(0x0d, 0x94, 0x88),      # turquesa oscurecido (legible en blanco)
-    "Micaela": RGBColor(0xc2, 0x55, 0x0a),    # naranja oscurecido
-    "Fabrizio": RGBColor(0x6d, 0x28, 0xd9),   # violeta oscurecido
-    "Jerónimo": RGBColor(0x92, 0x6c, 0x05),   # dorado oscurecido
-    "TODOS": RGBColor(0x1f, 0x29, 0x37),
+    "Sofía": RGBColor(0x05, 0x7d, 0xa6),      # celeste oscurecido (legible en blanco)
+    "Micaela": RGBColor(0xc2, 0x55, 0x0a),    # coral/ámbar oscurecido
+    "Fabrizio": RGBColor(0x7c, 0x1f, 0xc2),   # orquídea oscurecido
+    "Jerónimo": RGBColor(0x92, 0x72, 0x00),   # amarillo dorado oscurecido
+    "TODOS": RGBColor(0x2a, 0x18, 0x45),
 }
 
 SWATCH_HEX = {
-    "Sofía": "2dd4bf",
-    "Micaela": "fb923c",
-    "Fabrizio": "a78bfa",
-    "Jerónimo": "fbbf24",
-    "TODOS": "334155",
+    "Sofía": "4cc9f0",
+    "Micaela": "ff8c42",
+    "Fabrizio": "c77dff",
+    "Jerónimo": "ffd166",
+    "TODOS": "3f2566",
 }
 
 SCENES = [
